@@ -110,6 +110,13 @@
   % \item SIAGRM (avec asymptomatiques et non asymptomatiques)
   \item Techniques d'IA pour identifier les bonnes valeurs des paramètres 
   \end{itemize}
+
+  \begin{block}{}
+    \begin{center}
+  Dans notre approche, c'est l'IA qui ajuste les paramètres !
+\end{center}
+\end{block}
+
   
 \end{frame}
 
@@ -131,7 +138,7 @@
   \begin{itemize}
   \item Par autorité
     
-  \item par calibration
+  \item Par calibration
     \begin{itemize}
     \item Par les faits stylisés propres à une épidémie 
       (croissance exponentielle, puis décroissance)
@@ -162,10 +169,13 @@
 
   \begin{center}
     \includegraphics[width=1.0\linewidth]{figure1.jpg} \\
-    {\tiny à partir des données ministère santé \texttt{data.gouv.fr}}
+    {\tiny à partir des données ministère santé \texttt{data.gouv.fr} \\
+      {\tiny Selon notre modèle R0=2.0 avant confinement, R0=2.7 durant la premiere semaine, R0=0.7 durant le confinement}}
+
   \end{center}
   
 \end{frame}
+
 
 % --------------------------------------
 
@@ -174,10 +184,13 @@
 
   \begin{center}
     \includegraphics[width=1.0\linewidth]{figure2.jpg} \\
-    {\tiny à partir des données ministère santé \texttt{data.gouv.fr}}
-  \end{center}
+    {\tiny à partir des données ministère santé \texttt{data.gouv.fr}} \\
+    {\tiny Selon nous R0=2.0 avant confinement, R0=2.7 durant la premiere semaine, R0=0.7 durant le confinement}
+
+\end{center}
   
 \end{frame}
+
 
 % --------------------------------------
 
@@ -256,6 +269,36 @@
 
 
 
+% --------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Comment s'en sortir sans re-confinement ?}
+
+  \begin{center}
+    \includegraphics[width=1.0\linewidth]{figure9.jpg} \\
+
+    \textbf{Seule l'horizontale (R0=1) garantit un non re-confinement  !!\\
+    {\tiny Selon nous R0=2 avant confinement, R0=2.7 durant la premiere semaine, R0=0.7 durant le confinement}}
+  \end{center}
+  
+\end{frame}
+
+
+
+% --------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Comment s'en sortir sans re-confinement ?}
+
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{challenges_28_04_Allemagne.png} \\
+\href{https://www.challenges.fr/france/en-direct-deconfinement-six-francais-sur-dix-ne-font-pas-confiance-au-gouvernement_707222}{Challenges 28-04-2020}
+  \end{center}
+  
+\end{frame}
+
+
+
 
 % --------------------------------------
 
@@ -266,7 +309,14 @@
     \includegraphics[width=\linewidth]{Inserm+Pasteur_HdF.png}
 
     {\scriptsize Note 30 du Groupe de modélisation de l’épidémie COVID, 25 avril 2020}
+
+    \bigskip
     
+    \begin{block}{}
+      \begin{center}
+        Différence : chez nous c'est l'IA qui trouve les R0 !
+      \end{center}
+    \end{block}
   \end{center}
 
 \end{frame}
@@ -295,7 +345,7 @@
   \begin{itemize}
   \item Un modèle n'est qu'une abstraction de la réalité
   \item L'important n'est pas d'avoir le plus de paramètres, mais de trouver les plus pertinents (l'essence du problème étudié)
-  \item Pour que les thématiciens accaparent un modèle, il faut qu'il soit simple (exemple le modèle SIR : 3 boite cité dans des centaines de travaux en épidémio)
+  \item Pour que les thématiciens s'approprient un modèle, il faut qu'il soit simple (exemple le modèle SIR : 3 boites citées dans des centaines de travaux en épidémio)
   \end{itemize}
 
   \bigskip
