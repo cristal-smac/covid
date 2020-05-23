@@ -98,7 +98,7 @@ Infectious disease \sep SIR modelling \sep Decision support system \sep artifici
 
 \linenumbers
 
-\section{Introduction}
+\section{Introduction (ce qui se fait en épidémio)}
 
 Depuis exactement un siècle et le papier séminal de Kermack et
 McKendrick, la modélisation épidémiologique a pris une part
@@ -122,21 +122,19 @@ apprentissage génétique.
 Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour expliquer la hausse et la baisse rapides du nombre de patients infectés observées lors d'epidémies telles que la peste (à Londres en 1665, à Bombay en 1906) ou le choléra (à Londres en 1865). Il a été remis à l’avant-plan à la fin des années 1970 par Anderson et May \cite{}.
 
 
-
-
-\section{Notre modèle}
-
+\bigskip
 
 
 \hfill \scalebox{.75}{
-	\begin{tikzpicture}[node distance=1cm]
-		\node[draw, rectangle](leftNode) {Sains};
-		\node[below=0.25cm of leftNode](labelLeftNode) {\(S\)};
+	\begin{tikzpicture}[node distance=1cm,
+          boite/.style={draw,rectangle, minimum width=1cm, fill=#1!25}]
+          \node[boite=red](leftNode) {Sains};
+	        \node[below=0.25cm of leftNode](labelLeftNode) {\(S\)};
 		\node[right=of leftNode](middleLeft) {};
-		\node[draw, rectangle,right=of middleLeft](centralNode) {Infectés};
+		\node[boite=green,right=of middleLeft](centralNode) {Infectés};
 		\node[below=0.25cm of centralNode](labelCentralNode) {\(I\)};
 		\node[right=of centralNode](middleRight) {};
-		\node[draw, rectangle,right=of middleRight](rightNode) {Rétablis};
+		\node[boite=blue,right=of middleRight](rightNode) {Rétablis};
 		\node[below=0.25cm of rightNode](labelRightNode) {\(R\)};
 		\draw[->] (leftNode) --node[below, near start]{\(-\)} (middleLeft.center);
 		\draw[<->] (middleLeft.center) --node[below, near end]{\(+\)} (centralNode);
@@ -148,6 +146,38 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
 		\draw[->] (rightLabel) -- (middleRight);
 	\end{tikzpicture}
 } \hfill \
+
+
+
+\section{L'apport de l'informatique}
+
+L'usage de l'IA est une méthode nouvelle pour l'épidémio, mais ancienne pour l'informatique.
+
+
+Certains pensent que si on complexifie le modèle, on s'approche de la réalité : or plus il y a de paramètres, plus c'est facile de ``fitter'' : Problématique de l'overfitting (mettre une belle courbe qui passe par n points alors qu'en fait c'est une droite qui généralise le mieux).
+
+
+\begin{figure}[h]
+  \includegraphics[width=0.8\linewidth]{Overfitted_Data.png}  
+  \centering
+  \caption{\copyright \href{wikipedia}{https://en.wikipedia.org/wiki/Overfitting}  Des données bruitées (approximativement linéaires) sont approximées par une fonction linéaire et une fonction polynomiale. Bien que la fonction polynomiale soit parfaitement ajustée, on constate que la fonction linéaire généralise surement bien mieux}
+  \label{fig:overfitting}
+\end{figure}
+
+
+Un modèle qui ne fonctionne pas (parce que par exemple des R0 sont délirants) peut très bien néanmoins ``fitter'' les données  et donc continuer à prédire correctement les personnes en Réa
+
+
+L'apport de l'informatique :
+\begin{itemize}
+\item des techniques et des outils : algos d'apprentissage
+\item s'attacher à l'essence du problème : principe de parcimonie
+\end{itemize}
+
+
+\section{Hypothèse de simplicité}
+
+Avce quelque chose de très simple on ``fitte'' les données
 
 \bigskip
 
