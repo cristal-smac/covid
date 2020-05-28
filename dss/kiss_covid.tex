@@ -9,7 +9,10 @@
 \usepackage{tikz}
 \usetikzlibrary[positioning,arrows, arrows.meta]
 
-
+% Packages rajoutés par NM
+\usepackage[utf8]{inputenc} 
+\usepackage{adjustbox}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
 
 \journal{Journal of \LaTeX\ Templates}
 
@@ -42,7 +45,8 @@
 %\usepackage{numcompress}\bibliographystyle{model6-num-names}
 
 %% `Elsevier LaTeX' style
-\bibliographystyle{elsarticle-num}
+%\bibliographystyle{elsarticle-num}
+\bibliographystyle{elsarticle-num-names}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -148,6 +152,50 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
 } \hfill \
 
 
+\begin{table}
+\begin{adjustbox}{center}
+\resizebox{18cm}{!}{%
+\begin{tabular}{p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{11cm}}
+  Article & Type & Statut & Zone & Paramètres & Estimations proposées\\
+  \hline
+
+  \citet{benvenuto_application_2020} & ... & Published & ... &... &...  \\
+  \citet{verity_estimates_2020} & ... & Published & ... &... &...  \\
+  \citet{zlojutro_decision-support_2019} & ... & Published & ... &... &...  \\
+  \citet{chinazzi_effect_2020} & ... & Published & ... &... &...  \\
+  \citet{scire_reproductive_2020} & ... & Published & ... &... &...  \\
+  \citet{li_substantial_2020} & ... & Published & ... &... &...  \\
+
+  \citet{flaxman_report_2020} & Bayésien & Preprint & Europe & / & R0, Part de contaminés, Impact du confinement, Prévisions des décès \\
+  \citet{ferguson_report_2020} & ... & Preprint & ... &... &...  \\
+  \citet{di_domenico_expected_2020} & ... & Preprint & ... &... &...  \\
+  \citet{wilder_role_2020} & ... & Preprint & ... &... &...  \\
+  \citet{simha_simple_2020} & ... & Preprint & ... &... &...  \\
+  \citet{roux_covid-19_2020} & ... & Preprint & ... &... &...  \\
+  \citet{pullano_population_2020} & ... & Preprint & ... &... &...  \\
+  \citet{salje_estimating_2020} & ... & Preprint & ... &... &...  \\
+  \citet{team_forecasting_2020} & ... & Preprint & ... &... &...  \\
+  \citet{luo_predictive_2020} & ... & Preprint & ... &... &...  \\
+  \citet{branas_flattening_2020} & ... & Preprint & ... &... &...  \\
+  \citet{keskinocak_impact_2020} & ... & Preprint & ... &... &...  \\
+  \citet{wang_spatiotemporal_2020} & ... & Preprint & ... &... &...  \\
+  \citet{li_overview_2020} & ... & Preprint & ... &... &...  \\
+  \citet{woody_projections_2020} & ... & Preprint & ... &... &...  \\
+  \citet{pei_initial_2020} & ... & Preprint & ... &... &...  \\
+  \citet{platen_stochastic_2020} & ... & Preprint & ... &... &...  \\
+  \citet{arenas_mathematical_2020} & ... & Preprint & ... &... &...  \\
+  \citet{sanche_high_2020} & ... & Preprint & ... &... &...  \\
+  \citet{aleta_modeling_2020} & ... & Preprint & ... &... &...  \\
+
+\end{tabular}}
+\end{adjustbox}
+\caption{Description des modèles épidémiologiques proposés durant l'épidémie de COVID-19}
+\label{table:1}
+\end{table}
+
+
+
+
 
 \section{L'apport de l'informatique}
 
@@ -174,6 +222,85 @@ L'apport de l'informatique :
 \item s'attacher à l'essence du problème : principe de parcimonie
 \end{itemize}
 
+\section{Cinq principes issus de l'informatique}
+
+\textit{(Ici on peut décomposer en 1) définition du problème en épidémiologie puis 2) solutions apportées par l'informatique)}
+
+\subsection{Nécessité}
+
+Les modèles d'épidémie vont du simple modèle SIR que l'on peut résoudre sur un coin de feuille à des modèles réunissant des centaines d"agents indépendants, placés sur des cartes reproduisant des pays entiers (REF nécessaire). Les progrès informatiques rendent possible toutes les constructions auquelles les épidémiologistes peuvent penser. Quel doit être le principe qui guide les choix des modélisateurs ? 
+
+Un principe central dans la littérature informatique est celui de \textit{nécessité}. Chaque élément d'un modèle doit être nécessaire, et cette necessité doit etre justifiée.
+
+\subsection{Calibration}
+
+Tout modèle qui vise à estimer un élément de la réalité non accessible (comme le taux de propagation) ou à prédire un élément empirique doit être calibré sur des éléments réels. Si ce principe n'est pas respecté, il est possible de produire un modèle qui semble tout à fait répondre aux objectifs fixés mais qui décrit en fait un tout autre phénomène. (Illustration modèle python).
+
+Il s'agit d'un aspect central dans modélisation informatique et l'apprentissage informatique. Les principes de calibration issus de cette littérature peuvent être adaptés aux modèles épidémiologiques.
+
+\subsection{Approximation}
+
+Les possibilités induites par la modélisation donnent souvent l'illusion de la précision. On lit par exemple dans la presse des estimations très précises après la virgule produites par des modèles épiémiologiques portant sur des éléments très difficiles à estimer : c'est le cas par exemple des estimations du nombre d'infectés ou dut aux de propagation, souvent rapportées avec trois chiffres après la virgule (REF 4,4\% presse). 
+
+Ces analyses ignorent une question déterminante : le phénomène est-il capturable entièrement par des moyens computationnels ? Parfois le mécanisme à l'oeuvre est une dynamique changeante dont la prévision est hors de notre portée : c'est le cas des mutations possibles du COVID-19 au cours de l'épidémie, ou de sa réaction face à l'environnement. C'est particulièrement vrai lorsque l'on s'attaque à des dynamiques sociales, déterminantes dans le calcul du taux de propagation. La difficulté de modéliser les comportements humains et leur aggrégation au niveau de la société est un challenge considérable, qui nourrit une littérature particulièrement active parmi les discplines informatiques. Il est possibile de tirer de nombreux enseignements de cette littérature à destination de l'épidémiologie : le principal est sans doute le recul nécessaire relatif à la précision des estimations et des prévisions des modèles impliquant des décisions humaines (REF article JASSS).
+
+Un autre aspect relativement méconnu du grand public relatif aux modèles épidémiologiques est la sensibilité aux paramètres initiaux. Un changement relativement faible des conditions initiales peut conduire à des modélisations très différentes. Il s'agit d'un aspect bien connu des disciplines informatiques, étudié notament par les sciences de la complexité. 
+
+\subsection{Validation}
+
+L'épidémie de COVID-19 peut être modélisée de manière très différente, même si l'on s'accordait sur les caractéristiques de base du virus. La question déterminante est donc de savoir si une modélisation est difèle à la réalité qu'elle prétend simuler, voire prévoir. Il s'agit d'une problématique cezntrale en modélisation informatique, celle de la \textit{validation}.
+
+La littérature informatique peut nous aider à nous prémunir contre un certain nombre d'écueils, comme celui de l'\textit{overfitting}. (...)
+
+Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la littérature informatique sont disponibles. Un exemple est celui de la \textit{cross-validation}. (...)
+
+
+\subsection{Réplicabilité}
+
+
+
+\section{Présence de ces principes dans les modèles actuels}
+
+\begin{table}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|c|c|c|c|c}
+  Article & Nécessité & Calibration & Approximation & Validation & Réplicabilité\\
+  \hline
+
+  \citet{benvenuto_application_2020} & ... & ... & ... &... &...  \\
+  \citet{verity_estimates_2020} & ... & ... & ... &... &...  \\
+  \citet{zlojutro_decision-support_2019} & ... & ... & ... &... &...  \\
+  \citet{chinazzi_effect_2020} & ... & ... & ... &... &...  \\
+  \citet{scire_reproductive_2020} & ... & ... & ... &... &...  \\
+  \citet{li_substantial_2020} & ... & ... & ... &... &...  \\
+
+  \citet{flaxman_report_2020} &  & \checkmark & \checkmark & \checkmark &  \\
+  \citet{ferguson_report_2020} & ... & ... & ... &... &...  \\
+  \citet{di_domenico_expected_2020} & ... & ... & ... &... &...  \\
+  \citet{wilder_role_2020} & ... & ... & ... &... &...  \\
+  \citet{simha_simple_2020} & ... & ... & ... &... &...  \\
+  \citet{roux_covid-19_2020} & ... & ... & ... &... &...  \\
+  \citet{pullano_population_2020} & ... & ... & ... &... &...  \\
+  \citet{salje_estimating_2020} & ... & ... & ... &... &...  \\
+  \citet{team_forecasting_2020} & ... & ... & ... &... &...  \\
+  \citet{luo_predictive_2020} & ... & ... & ... &... &...  \\
+  \citet{branas_flattening_2020} & ... & ... & ... &... &...  \\
+  \citet{keskinocak_impact_2020} & ... & ... & ... &... &...  \\
+  \citet{wang_spatiotemporal_2020} & ... & ... & ... &... &...  \\
+  \citet{li_overview_2020} & ... & ... & ... &... &...  \\
+  \citet{woody_projections_2020} & ... & ... & ... &... &...  \\
+  \citet{pei_initial_2020} & ... & ... & ... &... &...  \\
+  \citet{platen_stochastic_2020} & ... & ... & ... &... &...  \\
+  \citet{arenas_mathematical_2020} & ... & ... & ... &... &...  \\
+  \citet{sanche_high_2020} & ... & ... & ... &... &...  \\
+  \citet{aleta_modeling_2020} & ... & ... & ... &... &...  \\
+
+\end{tabular}}
+\caption{Présence des cinq principes dans les modèles épidémiologiques proposés durant l'épidémie de COVID-19}
+\label{table:2}
+\end{table}
+
+[ANALYSE UNIQUEMENT POSITIVE]
 
 \section{Hypothèse de simplicité}
 
