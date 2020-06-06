@@ -159,16 +159,15 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
   Article & Type & Statut & Zone & Paramètres & Estimations proposées\\
   \hline
 
-  \citet{benvenuto_application_2020} & ... & Published & ... &... &...  \\
-  \citet{verity_estimates_2020} & ... & Published & ... &... &...  \\
-  \citet{zlojutro_decision-support_2019} & ... & Published & ... &... &...  \\
-  \citet{chinazzi_effect_2020} & ... & Published & ... &... &...  \\
-  \citet{scire_reproductive_2020} & ... & Published & ... &... &...  \\
-  \citet{li_substantial_2020} & ... & Published & ... &... &...  \\
+  \citet{benvenuto_application_2020} (ARIMA) & Econometric & Published & China & ... & Prediction de l'incidence et de la prévalence\\
+  \citet{zlojutro_decision-support_2019} & Stochastic metapopulation epidemic model & Published & World & X cities, 4 compartments each & Number of cases and cities at risk  \\
+  \citet{chinazzi_effect_2020} (GLEAM) & Stochastic metapopulation epidemic model & China & Published & 3200 subpopulations, 4 compartments each & Impact of travel restriction  \\
+  \citet{scire_reproductive_2020} & Poisson process & Published & Switzerland & ... & Estimation of the reproductive number R  \\
+  \citet{li_substantial_2020} & Stochastic metapopulation epidemic model & Published & China & 375 cities, 5 compartments each & Estimation of the prevalence and contagiousness \\
 
   \citet{flaxman_report_2020} & Bayésien & Preprint & Europe & / & R0, Part de contaminés, Impact du confinement, Prévisions des décès \\
-  \citet{ferguson_report_2020} & ... & Preprint & ... &... &...  \\
-  \citet{di_domenico_expected_2020} & ... & Preprint & ... &... &...  \\
+  \citet{ferguson_report_2020} & Agent-based & Preprint & Great Britain & 58 millions agents\footnote{REF 5 du papier} & Prediction of ICU and deaths according to lockdown scenarios  \\
+  \citet{di_domenico_expected_2020} & Compartmental epidemic model & Preprint & Paris region & 11 compartments, 3 age classes & Estimation of propagation, Prediction of ICU, Deaths according to scenarios \\
   \citet{wilder_role_2020} & ... & Preprint & ... &... &...  \\
   \citet{simha_simple_2020} & ... & Preprint & ... &... &...  \\
   \citet{roux_covid-19_2020} & ... & Preprint & ... &... &...  \\
@@ -176,16 +175,16 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
   \citet{salje_estimating_2020} & ... & Preprint & ... &... &...  \\
   \citet{team_forecasting_2020} & ... & Preprint & ... &... &...  \\
   \citet{luo_predictive_2020} & ... & Preprint & ... &... &...  \\
-  \citet{branas_flattening_2020} & ... & Preprint & ... &... &...  \\
+  \citet{branas_flattening_2020} & Metapopulation epidemic model & Preprint & USA & 3108 Counties, 5 compartments each & Prediction of hospital and ICU beds, and deaths  \\
   \citet{keskinocak_impact_2020} & ... & Preprint & ... &... &...  \\
   \citet{wang_spatiotemporal_2020} & ... & Preprint & ... &... &...  \\
   \citet{li_overview_2020} & ... & Preprint & ... &... &...  \\
   \citet{woody_projections_2020} & ... & Preprint & ... &... &...  \\
   \citet{pei_initial_2020} & ... & Preprint & ... &... &...  \\
   \citet{platen_stochastic_2020} & ... & Preprint & ... &... &...  \\
-  \citet{arenas_mathematical_2020} & ... & Preprint & ... &... &...  \\
-  \citet{sanche_high_2020} & ... & Preprint & ... &... &...  \\
-  \citet{aleta_modeling_2020} & ... & Preprint & ... &... &...  \\
+  \citet{arenas_mathematical_2020} & Metapopulation epidemic model & Preprint & Spain & 19 regions, 7 compartments each & Prediction of number of cases  \\
+  \citet{sanche_high_2020} & ... & Preprint & ... & ... & ...  \\
+  \citet{aleta_modeling_2020} & Agent-based \& Compartmental & Preprint & Boston & 85k agents, 10 compartments & Impact of distancing measures  \\
 
 \end{tabular}}
 \end{adjustbox}
@@ -194,7 +193,7 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
 \end{table}
 
 
-
+Poisson process : ref ferguson.
 
 
 \section{L'apport de l'informatique}
@@ -267,16 +266,15 @@ Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la
   Article & Nécessité & Calibration & Approximation & Validation & Réplicabilité\\
   \hline
 
-  \citet{benvenuto_application_2020} & ... & ... & ... &... &...  \\
-  \citet{verity_estimates_2020} & ... & ... & ... &... &...  \\
-  \citet{zlojutro_decision-support_2019} & ... & ... & ... &... &...  \\
-  \citet{chinazzi_effect_2020} & ... & ... & ... &... &...  \\
-  \citet{scire_reproductive_2020} & ... & ... & ... &... &...  \\
-  \citet{li_substantial_2020} & ... & ... & ... &... &...  \\
+  \citet{benvenuto_application_2020} (ARIMA) & X & \checkmark & X & X & A voir (github)  \\
+  \citet{zlojutro_decision-support_2019} & Intermédiaire & \checkmark & Intermédiaire & ... & Intermédiaire \\
+  \citet{chinazzi_effect_2020} (GLEAM) & X & \checkmark & \checkmark & ... & Intermédiaire  \\
+  \citet{scire_reproductive_2020} & X & \checkmark & \checkmark & X & \checkmark  \\
+  \citet{li_substantial_2020} & X & \checkmark  & \checkmark  & X & Intermédiaire \\
 
   \citet{flaxman_report_2020} &  & \checkmark & \checkmark & \checkmark &  \\
-  \citet{ferguson_report_2020} & ... & ... & ... &... &...  \\
-  \citet{di_domenico_expected_2020} & ... & ... & ... &... &...  \\
+  \citet{ferguson_report_2020} & X & \checkmark & X & X & X  \\
+  \citet{di_domenico_expected_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & Intermédiaire \\
   \citet{wilder_role_2020} & ... & ... & ... &... &...  \\
   \citet{simha_simple_2020} & ... & ... & ... &... &...  \\
   \citet{roux_covid-19_2020} & ... & ... & ... &... &...  \\
@@ -284,16 +282,16 @@ Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la
   \citet{salje_estimating_2020} & ... & ... & ... &... &...  \\
   \citet{team_forecasting_2020} & ... & ... & ... &... &...  \\
   \citet{luo_predictive_2020} & ... & ... & ... &... &...  \\
-  \citet{branas_flattening_2020} & ... & ... & ... &... &...  \\
+  \citet{branas_flattening_2020} & X & \checkmark & \checkmark & X & X \\
   \citet{keskinocak_impact_2020} & ... & ... & ... &... &...  \\
   \citet{wang_spatiotemporal_2020} & ... & ... & ... &... &...  \\
   \citet{li_overview_2020} & ... & ... & ... &... &...  \\
   \citet{woody_projections_2020} & ... & ... & ... &... &...  \\
   \citet{pei_initial_2020} & ... & ... & ... &... &...  \\
   \citet{platen_stochastic_2020} & ... & ... & ... &... &...  \\
-  \citet{arenas_mathematical_2020} & ... & ... & ... &... &...  \\
+  \citet{arenas_mathematical_2020} & X & \checkmark & \checkmark & Intermédiaire & Intermédiaire  \\
   \citet{sanche_high_2020} & ... & ... & ... &... &...  \\
-  \citet{aleta_modeling_2020} & ... & ... & ... &... &...  \\
+  \citet{aleta_modeling_2020} & X & \checkmark & \checkmark & X & X  \\
 
 \end{tabular}}
 \caption{Présence des cinq principes dans les modèles épidémiologiques proposés durant l'épidémie de COVID-19}
@@ -301,6 +299,10 @@ Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la
 \end{table}
 
 [ANALYSE UNIQUEMENT POSITIVE]
+
+Approximation :
+
+Mentionner benvenuto_application_2020 : "The correlogram reporting the ACF and PACF showed that both prevalence and incidence of COVID- 2019 are not influenced by the seasonality."
 
 \section{Hypothèse de simplicité}
 
