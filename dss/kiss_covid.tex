@@ -156,35 +156,35 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
 \begin{adjustbox}{center}
 \resizebox{18cm}{!}{%
 \begin{tabular}{p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{11cm}}
-  Article & Type & Statut & Zone & Paramètres & Estimations proposées\\
+  Article & Type & Statut & Zone & Paramètres & Objectif\\
   \hline
 
-  \citet{benvenuto_application_2020} (ARIMA) & Econometric & Published & China & ... & Prediction de l'incidence et de la prévalence\\
+  \citet{benvenuto_application_2020} (ARIMA) & Statistical & Published & China & ... & Prediction de l'incidence et de la prévalence\\
   \citet{zlojutro_decision-support_2019} & Stochastic metapopulation epidemic model & Published & World & X cities, 4 compartments each & Number of cases and cities at risk  \\
   \citet{chinazzi_effect_2020} (GLEAM) & Stochastic metapopulation epidemic model & China & Published & 3200 subpopulations, 4 compartments each & Impact of travel restriction  \\
   \citet{scire_reproductive_2020} & Poisson process & Published & Switzerland & ... & Estimation of the reproductive number R  \\
   \citet{li_substantial_2020} & Stochastic metapopulation epidemic model & Published & China & 375 cities, 5 compartments each & Estimation of the prevalence and contagiousness \\
 
-  \citet{flaxman_report_2020} & Bayésien & Preprint & Europe & / & R0, Part de contaminés, Impact du confinement, Prévisions des décès \\
+  \citet{flaxman_report_2020} & Statistical & Preprint & Europe & / & R0, Part de contaminés, Impact du confinement, Prévisions des décès \\
   \citet{ferguson_report_2020} & Agent-based & Preprint & Great Britain & 58 millions agents\footnote{REF 5 du papier} & Prediction of ICU and deaths according to lockdown scenarios  \\
   \citet{di_domenico_expected_2020} & Compartmental epidemic model & Preprint & Paris region & 11 compartments, 3 age classes & Estimation of propagation, Prediction of ICU, Deaths according to scenarios \\
-  \citet{wilder_role_2020} & ... & Preprint & ... &... &...  \\
-  \citet{simha_simple_2020} & ... & Preprint & ... &... &...  \\
-  \citet{roux_covid-19_2020} & ... & Preprint & ... &... &...  \\
-  \citet{pullano_population_2020} & ... & Preprint & ... &... &...  \\
-  \citet{salje_estimating_2020} & ... & Preprint & ... &... &...  \\
-  \citet{team_forecasting_2020} & ... & Preprint & ... &... &...  \\
-  \citet{luo_predictive_2020} & ... & Preprint & ... &... &...  \\
+  \citet{wilder_role_2020} & Agent-based model & Preprint & Hubei, Lombardy & 10 millions agents & Impact of age distribution and familial
+household contacts on transmission  \\
+  \citet{simha_simple_2020} & Compartment model & Preprint & Inde & 3 compartments & Prediction of cases, Lockdowns impact  \\
+  \citet{roux_covid-19_2020} & Compartmental model & Preprint & France & 8 compartments x 17 age groups & Impact of lockdown on cases, deaths\\
+  \citet{salje_estimating_2020} & ... & Preprint & France & 6 compartments x 8 age x 2 sex groups &Estimation du R0, et de la part de la pop infectée / décédée, impact du lockdown sur R0.  \\
+  \citet{team_forecasting_2020} & Statistical & Preprint & Europe \& USA & ... & Prediction of deaths and hospital demand \\
+  \citet{luo_predictive_2020} & Compartmental model & Preprint & Singapour, USA, Italie, Bresil & 3 compartimments & Prediction du nombre de cas  \\
   \citet{branas_flattening_2020} & Metapopulation epidemic model & Preprint & USA & 3108 Counties, 5 compartments each & Prediction of hospital and ICU beds, and deaths  \\
-  \citet{keskinocak_impact_2020} & ... & Preprint & ... &... &...  \\
-  \citet{wang_spatiotemporal_2020} & ... & Preprint & ... &... &...  \\
-  \citet{li_overview_2020} & ... & Preprint & ... &... &...  \\
-  \citet{woody_projections_2020} & ... & Preprint & ... &... &...  \\
-  \citet{pei_initial_2020} & ... & Preprint & ... &... &...  \\
-  \citet{platen_stochastic_2020} & ... & Preprint & ... &... &...  \\
+  \citet{keskinocak_impact_2020} &  Agent-based & Preprint & Georgia (USA) & 1 million agents & Impact of Social Distancing sur décès et infections  \\
+  \citet{wang_spatiotemporal_2020} (STEM) & Compartmental model & Preprint & USA & 3 compartments x 3,104 counties & Prediction of deaths and cases \\
+  \citet{li_overview_2020} (DELPHI) & Compartmental model & Documentation & World & 11 compartments & Impact mesures, prédiction nombre de cas et nombre de morts  \\
+  \citet{woody_projections_2020} & Statistical & Preprint & USA & 50 states & Predict the number of deaths  \\
+  \citet{platen_stochastic_2020} & Compartment model & Preprint & Australia & 4 compartments & Propagation number, Predicted number of deaths and cases  \\
   \citet{arenas_mathematical_2020} & Metapopulation epidemic model & Preprint & Spain & 19 regions, 7 compartments each & Prediction of number of cases  \\
-  \citet{sanche_high_2020} & ... & Preprint & ... & ... & ...  \\
-  \citet{aleta_modeling_2020} & Agent-based \& Compartmental & Preprint & Boston & 85k agents, 10 compartments & Impact of distancing measures  \\
+  \citet{sanche_high_2020} & Poisson model \& Compartmental model & Preprint & Wuhan & 7 compartments & Estimate epidemiological parameters (R0, incubation period, etc.)  \\
+  \citet{aleta_modeling_2020} & Agent-based & Preprint & Boston & 85k agents & Impact of distancing measures  \\
+  REF TUOMISTO & Agent-based & Preprint & Helsinki & ... & Impact of simulated 	mobility restriction on hospitalized, ICU and Deaths \\
 
 \end{tabular}}
 \end{adjustbox}
@@ -231,6 +231,10 @@ Les modèles d'épidémie vont du simple modèle SIR que l'on peut résoudre sur
 
 Un principe central dans la littérature informatique est celui de \textit{nécessité}. Chaque élément d'un modèle doit être nécessaire, et cette necessité doit etre justifiée.
 
+A détailler : interaction avec validation. 
+1) Rapport complexité / fitting
+2) Rapport justification / validation  (si non validé, alors doit être justifié)
+
 \subsection{Calibration}
 
 Tout modèle qui vise à estimer un élément de la réalité non accessible (comme le taux de propagation) ou à prédire un élément empirique doit être calibré sur des éléments réels. Si ce principe n'est pas respecté, il est possible de produire un modèle qui semble tout à fait répondre aux objectifs fixés mais qui décrit en fait un tout autre phénomène. (Illustration modèle python).
@@ -245,6 +249,10 @@ Ces analyses ignorent une question déterminante : le phénomène est-il captura
 
 Un autre aspect relativement méconnu du grand public relatif aux modèles épidémiologiques est la sensibilité aux paramètres initiaux. Un changement relativement faible des conditions initiales peut conduire à des modélisations très différentes. Il s'agit d'un aspect bien connu des disciplines informatiques, étudié notament par les sciences de la complexité. 
 
+***
+
+Le problème vient du fait que l'approximation n'est pas une fonction "native" des nouveaux outils proposés à l'épidémiologie. La simulation informatique d'un modèle tel que les modèles par agents ou les modèles compartimentaux nécessitent des input fixes et donnent des résultats tout aussi fixes : une prédiction telle que "2452 décès" constituera alors un résultat. C'est donc une étape supplémentaire que d'insufler l'approximation à ces modèles là. SOit en transmettant la véritable approximation des entrées, en réalisant plusieurs scénarios avec des valeurs différentes. Soit mathématiquement, en transformant une entrée en distribution de probabilité ce qui permet d'obtenir un résultat aléatoire, que l'on pourra alors caractériser à l'aide d'intervalles de confiance. Soit, si l'approximation provient de mécanismes stochastiques à l'intérieur du modèle, en procédant à un grand nombre de simulations qui permettront d'estimer le caractère aléatoire du résultat, par exemple via une moyenne et un écart-type du nombre de décés prédits. Dans de nombreux cas, la modélisation réclamera une combinaison de ces éléments là.
+
 \subsection{Validation}
 
 L'épidémie de COVID-19 peut être modélisée de manière très différente, même si l'on s'accordait sur les caractéristiques de base du virus. La question déterminante est donc de savoir si une modélisation est difèle à la réalité qu'elle prétend simuler, voire prévoir. Il s'agit d'une problématique cezntrale en modélisation informatique, celle de la \textit{validation}.
@@ -252,6 +260,13 @@ L'épidémie de COVID-19 peut être modélisée de manière très différente, m
 La littérature informatique peut nous aider à nous prémunir contre un certain nombre d'écueils, comme celui de l'\textit{overfitting}. (...)
 
 Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la littérature informatique sont disponibles. Un exemple est celui de la \textit{cross-validation}. (...)
+
+Attention : manipulation graphique (aplatissement : ROUX, colonnes : Luo)
+
+Validation : 2 modèles : 
+
+1) avec points au hasard
+2) prédiction des derniers jours et comparaison avec la réalité (5 jours par exemple)
 
 
 \subsection{Réplicabilité}
@@ -272,31 +287,39 @@ Pour aider à valider un modèle épidémiologique, plusieurs outils issus de la
   \citet{scire_reproductive_2020} & X & \checkmark & \checkmark & X & \checkmark  \\
   \citet{li_substantial_2020} & X & \checkmark  & \checkmark  & X & Intermédiaire \\
 
-  \citet{flaxman_report_2020} &  & \checkmark & \checkmark & \checkmark &  \\
+  \citet{flaxman_report_2020} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
   \citet{ferguson_report_2020} & X & \checkmark & X & X & X  \\
-  \citet{di_domenico_expected_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & Intermédiaire \\
-  \citet{wilder_role_2020} & ... & ... & ... &... &...  \\
-  \citet{simha_simple_2020} & ... & ... & ... &... &...  \\
-  \citet{roux_covid-19_2020} & ... & ... & ... &... &...  \\
-  \citet{pullano_population_2020} & ... & ... & ... &... &...  \\
-  \citet{salje_estimating_2020} & ... & ... & ... &... &...  \\
-  \citet{team_forecasting_2020} & ... & ... & ... &... &...  \\
-  \citet{luo_predictive_2020} & ... & ... & ... &... &...  \\
+  \citet{di_domenico_expected_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & Intermédiaire \\ 
+  \citet{wilder_role_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & \checkmark  \\
+  \citet{simha_simple_2020} & Intermédiaire & Intermédiaire & \checkmark & Intermédiaire & Intermédiaire \\
+  \citet{roux_covid-19_2020} & X & Intermédiaire & Intermédiaire & Intermédiaire & X  \\
+  \citet{salje_estimating_2020} & X & Intermédiaire & Intermédiaire & Intermédiaire & X  \\
+  \citet{team_forecasting_2020} & X & \checkmark & \checkmark & X & X  \\
+  \citet{luo_predictive_2020} & Intermédiaire & \checkmark & \checkmark & X & X \\
   \citet{branas_flattening_2020} & X & \checkmark & \checkmark & X & X \\
-  \citet{keskinocak_impact_2020} & ... & ... & ... &... &...  \\
-  \citet{wang_spatiotemporal_2020} & ... & ... & ... &... &...  \\
-  \citet{li_overview_2020} & ... & ... & ... &... &...  \\
-  \citet{woody_projections_2020} & ... & ... & ... &... &...  \\
-  \citet{pei_initial_2020} & ... & ... & ... &... &...  \\
-  \citet{platen_stochastic_2020} & ... & ... & ... &... &...  \\
+  \citet{keskinocak_impact_2020} & X & \checkmark & X & Intermédiaire & X  \\
+  \citet{wang_spatiotemporal_2020} & X & \checkmark & Intermédiaire & Intermédiaire & Intermédiaire \\
+  \citet{li_overview_2020} & Intermédiaire & \checkmark & X & X & Intermédiaire \\
+  \citet{woody_projections_2020} & X & \checkmark & Intermédiaire & \checkmark & X \\
+  \citet{platen_stochastic_2020} & X & X & X & X & X  \\
   \citet{arenas_mathematical_2020} & X & \checkmark & \checkmark & Intermédiaire & Intermédiaire  \\
-  \citet{sanche_high_2020} & ... & ... & ... &... &...  \\
+  \citet{sanche_high_2020} & X & \checkmark & \checkmark & Intermédiaire & X  \\
   \citet{aleta_modeling_2020} & X & \checkmark & \checkmark & X & X  \\
+  REF TUOMISTO & Intermediaire & Intermediaire & X & Intermediaire & \checkmark \\
 
 \end{tabular}}
 \caption{Présence des cinq principes dans les modèles épidémiologiques proposés durant l'épidémie de COVID-19}
 \label{table:2}
 \end{table}
+
+Replicabilité : analyse du coût :
+0 : Impossible
+Intermédiaire : Possible mais coût très élevé pour différentes raisons, avec plusieurs scénarios possibles:
+- Tout est détaillé et clair mais pas de code
+- Le code est disponible, tout est disponible, mais pas clair du tout et travail très important à mener
+
+Checkmark : Réalisable, clair, expliqué, code disponible
+
 
 [ANALYSE UNIQUEMENT POSITIVE]
 
