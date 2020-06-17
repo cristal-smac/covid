@@ -12,7 +12,8 @@
 % Packages rajoutés par NM
 \usepackage[utf8]{inputenc} 
 \usepackage{adjustbox}
-\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.2) -- cycle;}
+\def\lightcheckmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.05) -- cycle;}
 
 \journal{Journal of \LaTeX\ Templates}
 
@@ -155,7 +156,7 @@ Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour ex
 \begin{table}
 \begin{adjustbox}{center}
 \resizebox{18cm}{!}{%
-\begin{tabular}{p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{11cm}}
+\begin{tabular}{p{4cm}|p{4cm}|p{2cm}|p{2cm}|p{4cm}|p{11cm}}
   Article & Type & Statut & Zone & Paramètres & Objectif\\
   \hline
 
@@ -281,31 +282,31 @@ Validation : 2 modèles :
   Article & Nécessité & Calibration & Approximation & Validation & Réplicabilité\\
   \hline
 
-  \citet{benvenuto_application_2020} (ARIMA) & X & \checkmark & X & X & A voir (github)  \\
-  \citet{zlojutro_decision-support_2019} & Intermédiaire & \checkmark & Intermédiaire & ... & Intermédiaire \\
-  \citet{chinazzi_effect_2020} (GLEAM) & X & \checkmark & \checkmark & ... & Intermédiaire  \\
-  \citet{scire_reproductive_2020} & X & \checkmark & \checkmark & X & \checkmark  \\
-  \citet{li_substantial_2020} & X & \checkmark  & \checkmark  & X & Intermédiaire \\
+  \citet{benvenuto_application_2020} (ARIMA) &   & \checkmark &   &   & \checkmark  \\
+  \citet{zlojutro_decision-support_2019} & \textasciitilde & \checkmark & \lightcheckmark & ... & \lightcheckmark \\
+  \citet{chinazzi_effect_2020} (GLEAM) &   & \checkmark & \checkmark & ... & \lightcheckmark  \\
+  \citet{scire_reproductive_2020} &   & \checkmark & \checkmark &   & \checkmark  \\
+  \citet{li_substantial_2020} &   & \checkmark  & \checkmark  &   & \lightcheckmark \\
 
   \citet{flaxman_report_2020} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
-  \citet{ferguson_report_2020} & X & \checkmark & X & X & X  \\
-  \citet{di_domenico_expected_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & Intermédiaire \\ 
-  \citet{wilder_role_2020} & Intermédiaire & \checkmark & \checkmark & \checkmark & \checkmark  \\
-  \citet{simha_simple_2020} & Intermédiaire & Intermédiaire & \checkmark & Intermédiaire & Intermédiaire \\
-  \citet{roux_covid-19_2020} & X & Intermédiaire & Intermédiaire & Intermédiaire & X  \\
-  \citet{salje_estimating_2020} & X & Intermédiaire & Intermédiaire & Intermédiaire & X  \\
-  \citet{team_forecasting_2020} & X & \checkmark & \checkmark & X & X  \\
-  \citet{luo_predictive_2020} & Intermédiaire & \checkmark & \checkmark & X & X \\
-  \citet{branas_flattening_2020} & X & \checkmark & \checkmark & X & X \\
-  \citet{keskinocak_impact_2020} & X & \checkmark & X & Intermédiaire & X  \\
-  \citet{wang_spatiotemporal_2020} & X & \checkmark & Intermédiaire & Intermédiaire & Intermédiaire \\
-  \citet{li_overview_2020} & Intermédiaire & \checkmark & X & X & Intermédiaire \\
-  \citet{woody_projections_2020} & X & \checkmark & Intermédiaire & \checkmark & X \\
-  \citet{platen_stochastic_2020} & X & X & X & X & X  \\
-  \citet{arenas_mathematical_2020} & X & \checkmark & \checkmark & Intermédiaire & Intermédiaire  \\
-  \citet{sanche_high_2020} & X & \checkmark & \checkmark & Intermédiaire & X  \\
-  \citet{aleta_modeling_2020} & X & \checkmark & \checkmark & X & X  \\
-  REF TUOMISTO & Intermediaire & Intermediaire & X & Intermediaire & \checkmark \\
+  \citet{ferguson_report_2020} &   & \checkmark &   &   &    \\
+  \citet{di_domenico_expected_2020} & \lightcheckmark & \checkmark & \checkmark & \checkmark & \lightcheckmark \\ 
+  \citet{wilder_role_2020} & \lightcheckmark & \checkmark & \checkmark & \checkmark & \checkmark  \\
+  \citet{simha_simple_2020} & \lightcheckmark & \lightcheckmark & \checkmark & \lightcheckmark & \lightcheckmark \\
+  \citet{roux_covid-19_2020} &   & \lightcheckmark & \lightcheckmark & \lightcheckmark &    \\
+  \citet{salje_estimating_2020} &   & \lightcheckmark & \lightcheckmark & \lightcheckmark &    \\
+  \citet{team_forecasting_2020} &   & \checkmark & \checkmark &   &    \\
+  \citet{luo_predictive_2020} & \lightcheckmark & \checkmark & \checkmark &   &   \\
+  \citet{branas_flattening_2020} &   & \checkmark & \checkmark &   &   \\
+  \citet{keskinocak_impact_2020} &   & \checkmark &   & \lightcheckmark &    \\
+  \citet{wang_spatiotemporal_2020} &   & \checkmark & \lightcheckmark & \lightcheckmark & \lightcheckmark \\
+  \citet{li_overview_2020} & \lightcheckmark & \checkmark &   &   & \lightcheckmark \\
+  \citet{woody_projections_2020} &   & \checkmark & \lightcheckmark & \checkmark &   \\
+  \citet{platen_stochastic_2020} &   &   &   &   &    \\
+  \citet{arenas_mathematical_2020} &   & \checkmark & \checkmark & \lightcheckmark & \lightcheckmark  \\
+  \citet{sanche_high_2020} &   & \checkmark & \checkmark & \lightcheckmark &    \\
+  \citet{aleta_modeling_2020} &   & \checkmark & \checkmark &   &    \\
+  REF TUOMISTO & \lightcheckmark & \lightcheckmark &   & \lightcheckmark & \checkmark \\
 
 \end{tabular}}
 \caption{Présence des cinq principes dans les modèles épidémiologiques proposés durant l'épidémie de COVID-19}
@@ -314,7 +315,7 @@ Validation : 2 modèles :
 
 Replicabilité : analyse du coût :
 0 : Impossible
-Intermédiaire : Possible mais coût très élevé pour différentes raisons, avec plusieurs scénarios possibles:
+\lightcheckmark : Possible mais coût très élevé pour différentes raisons, avec plusieurs scénarios possibles:
 - Tout est détaillé et clair mais pas de code
 - Le code est disponible, tout est disponible, mais pas clair du tout et travail très important à mener
 
@@ -325,54 +326,160 @@ Checkmark : Réalisable, clair, expliqué, code disponible
 
 Approximation :
 
-Mentionner benvenuto_application_2020 : "The correlogram reporting the ACF and PACF showed that both prevalence and incidence of COVID- 2019 are not influenced by the seasonality."
+Mentionner \cite{benvenuto_application_2020} : "The correlogram reporting the ACF and PACF showed that both prevalence and incidence of COVID- 2019 are not influenced by the seasonality."
 
-\section{Hypothèse de simplicité}
+\section{Un exemple simple}
 
-Avce quelque chose de très simple on ``fitte'' les données
+\subsection{Fitting d'un modèle simple}
+
+\begin{figure}
+\begin{center}
+  \begin{tikzpicture}[node distance=1cm,
+    boite/.style={draw,rectangle, minimum width=1cm, fill=#1!25}]
+    \node[boite=red](premier){\(S\)};
+    \node[boite=green, right=of premier](second){\(I\)};
+    \draw[->] (premier) -- node[midway](milieu){} (second);
+    \node[below=.5cm of milieu](labelMilieu){\(\beta\)};
+    \draw[->] (labelMilieu) -- (milieu.center);
+    \node[boite=yellow, above right=of second](troisHaut){\(G\)};
+    \draw[->] (second.east) -- (troisHaut.west);
+    \node[boite=blue, below right=of second](troisBas){\(R\)};
+    \draw[->] (second.east) -- (troisBas.west);
+    \node[boite=gray, right=of troisHaut](quatre){\(M\)};
+    \draw[->] (troisHaut) -- (quatre);
+  \end{tikzpicture}
+\end{center}
+\caption{Le modèle épidémiologique par compartiments SIRGM}
+\label{figure:SIRGM}
+\end{figure}
+
+Il s'agit d'un modèle SIRGM : une extension du modèle SIR aux deux catégories qui intéressent particulièrement les décideurs en ce qui concerne le COVID-19, à savoir le nombre de personnes en réanimation (R) et le nombre de décès (M). Incidemment, il s'agit des catégories pour lesquelles les données sont les plus fiables. Par opposition, le nombre d'infectés et le nombre d'hospitalisés souffrent d'un biais de sélection important et variable au cours du temps, dus à des changements de politiques publiques.
+
+L'objet du modèle est de trouver les paramètres de ce modèle épidémiologique de sorte qu'il reproduise le plus fidèlement possible les données réelles. D'un point de vue informatique, il s'agit de fitter le plus précisèment possible les courbes du nombre de lits occupés en réanimation et du nombre de décès. 
+
+Certains paramètres du modèle épidémiologique ont fait l'objet d'études médicales : c'est le cas du temps de contagiosité et du taux de cas grave. Ils sont donc fixés à priori, et nous verrons à la section suivante les conséquences de les laisser libres.
+
+un autre paramètre fixé à priori est celui du nombre d'infecté initial. D'après les données, 3 personnes ont été officiellement depistées au début de la période, néanmoins le nombre d'infecté réel est probablement beaucoup plus éevé. Il n'y a pas de moyen de connaître précisèment ce chiffre : nous l'avons fixé arbitrairement à 200. Ce paramètre interagit principalement avec le taux de propagation de la période initiale. Si le nombre d'infecté initial est moindre, le fitting de la courbe ajustera simplement le taux de propagtion initial à la hausse et conservera les autres paramètres à un niveau très similaire. Il s'agit d'un avertissement supplémentaire relatif à une interprétation trop précise des taux de propagation : ils dépendent crucialement d'informations dont nous ne disposons pas.
+
+La propagation du virus est le premier paramètre de ce type de modèle (c'est le bêta en Figure \ref{figure:SIRGM}, qui peut également être exprimé en termes de R0). Cependant, ce taux de propagation dépend du comportement humain, et donc des changements de politiques publiques en termes de confinement, de règles de distanciation sociale, etc. AU lieu de fixer un seul taux de propagation, nous en fixons donc quatre, soit un pour chaque grande période en France : la période initiale, une période d'une dizaine de jours précédant l'entrée en vigueur réglementaire du confinement strict, le confinement lui même, puis le déconfinement. La période précédant le confionement a ét mrquée par des déplacements très importants de la population qui pouvait choisir son lieu de confinement, ce qui explique la nécéssité de la prendre en compte.
+
+Les autres paramètres sont les variables d'ajustement laissées libres pour obtenir un modèle épidémiologique cohérent avec les données observées.
+
+Le problème devient dès lors un problème d'optimisation, et plusieurs techniques s'ouvrent à nous pour fitter le modèle. Nous avons utilisé un algorithme génétique basique. Les résultats sont reportés en Table \ref{table:meilleur} et en Figure \ref{figure:meilleur}.
+
+\begin{table}
+\small
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+\input{figures/meilleur.tex} 
+      \hline
+\end{tabular}
+\end{center}
+\caption{Paramètres du modèle SIGRM.}
+\label{table:meilleur}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/meilleur.jpg}
+\end{center}
+\caption{Le modèle SIGRM avec les paramètres donnés en Table \ref{table:meilleur} correspond aux données.}
+\label{figure:meilleur}
+\end{figure}
+
+Le modèle fitte raisonnablement bien les données, et ce avec une structure très simple. Les parmètres estimés sont cohérent avec la littérature scientifique portant sur le COVID-19. 
+
+\subsection{Progression des médecins}
+
+Ce type de modèle peut néanmoins ignorer certains phénomènes qui viendraient changer les paramètres au cours du temps. C'est par exemple le cas des taux de mortalité, qui peuvent être affectés par la progression du corps médical sur le sujet. Des entretiens avec des reponsables du CHU de Lille nous ont informé de l'amélioration du traitement des personnes en réanimation. Ce type de phénomène est compatible avec une modélisation légèrement différente de l'épidémie, comme en témoigne la Figure \ref{figure:medecins}.
+
+\begin{table}
+\small
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+\input{figures/medecins.tex} 
+      \hline
+\end{tabular}
+\end{center}
+\caption{Paramètres du modèle intégrant la progression du traitement.}
+\label{table:medecins}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/medecins.jpg}
+\end{center}
+\caption{Les donnnées réelles sont compatibles avec une modélisation épidémiologique intégrant la progression du traitement des patients en réanimation.}
+\label{figure:medecins}
+\end{figure}
+
+On observe que le modèle permet un meilleur fitting des entrées en réanimation si la courbe des décés est autorisée à décrocher progressivement de celle prévue par le modèle. Cela témoigne du fait qu'intégrer la progression des médecins améliorerait le fitting des données. Il y a donc un arbitrage a réaliser en termes de perte de simplicité versus l'amélioration de la prédictabilité du modèle.
+
+\subsection{Des paramètres laissés libres}
+
+Le danger de laisser trop de paramètres libres pour l'optimisation est d'obtenir une modélisation plus performante mais qui correspond à un tout autre virus. Prenons l'exemple du temps de contagiosité : on sait désormais que c'est une des charactéristiques singulières du COVID-19, qui présente des temps d'incubation et de contagiosité très importants comparés aux autres virus.
+
+Si l'on laisse le temps de contagiosité libre dans la modélisation (via le taux S vers I), on peut obtenir une modélisation telle que décrite dans la Table \ref{table:faux} et la Figure \ref{figure:faux}.
+
+\begin{table}
+\small
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+\input{figures/faux.tex} 
+      \hline
+\end{tabular}
+\end{center}
+\caption{Paramètres clairement différents de l'épidémie de COVID-19}
+\label{table:faux}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/faux.jpg}
+\end{center}
+\caption{La modélisation issue des paramètres de la Table \ref{table:faux} donne de bons résultats.}
+\label{figure:faux}
+\end{figure}
+
+Il s'agit de la modélisation d'un virus très faiblement mortel, qui présente un temps de contagiosité réduit (entre un et deux jours) et qui se serait répandu dans la population avec un R0 en permanence supérieur à 1. L'épidémie aurait atteint son pic et faiblirait désormais car le seuil de l'immunité collective serait atteint, et 88\% de la population aurait contracté ce virus.
+
+Cette modélisation correspond aux données observées : en l'absence de spécification volontaire de données médicales observées par ailleurs, il est donc tout à fait possible d'obtenir un modèle épidémiologique très différent de l'épidémie réelle, mais qui présenterait les mêmes statistiques observables.
+
+\section*{References}
+
+\bibliography{kiss_covid}
+\nocite{*}
+
+\end{document}
+
+\iffalse
 
 \bigskip
 
 \hfill \scalebox{.75}{
-	\begin{tikzpicture}[node distance=1cm,
-		boite/.style={draw,rectangle, minimum width=1cm, fill=#1!25}]
-		\node[boite=red](premier){\(S\)};
-		\node[boite=green, right=of premier](second){\(I\)};
-		\draw[->] (premier) -- node[midway](milieu){} (second);
-		\node[below=.5cm of milieu](labelMilieu){\(\beta\)};
-		\draw[->] (labelMilieu) -- (milieu.center);
-		\node[boite=yellow, above right=of second](troisHaut){\(G\)};
-		\draw[->] (second.east) -- (troisHaut.west);
-		\node[boite=blue, below right=of second](troisBas){\(R\)};
-		\draw[->] (second.east) -- (troisBas.west);
-		\node[boite=gray, right=of troisHaut](quatre){\(M\)};
-		\draw[->] (troisHaut) -- (quatre);
-	\end{tikzpicture}
-} \hfill \
-
-\bigskip
-
-\hfill \scalebox{.75}{
-	\begin{tikzpicture}[node distance=1cm,
-		boite/.style={draw,rectangle, minimum width=1cm, fill=#1!25}]
-		\node[boite=red](premier){\(S\)};
-		\node[boite=green, above right=of premier](secondHaut){\(A\)};
-		\draw[->] (premier) -- node[midway](milieuHaut){} (secondHaut.west);
-		\node[above=.5cm of milieuHaut](labelMilieuHaut){\(\alpha\)};
-		\draw[->] (labelMilieuHaut) -- (milieuHaut.center);
-		\node[boite=orange, below right=of premier](secondBas){\(B\)};
-		\draw[->] (premier) -- node[midway](milieuBas){} (secondBas.west);
-		\node[below=.5cm of milieuBas](labelMilieuBas){\(\beta\)};
-		\draw[->] (labelMilieuBas) -- (milieuBas.center);
-		\node[boite=blue, right=of secondHaut](troisHaut){\(R\)};
-		\draw[->] (secondHaut) -- (troisHaut);
-		\draw[->] (secondBas) -- (troisHaut);
-		\node[boite=yellow, right=of secondBas](troisBas){\(G\)};
-		\draw[->] (secondBas) -- (troisBas);
-		\draw[->] (troisBas) -- (troisHaut);
-		\node[boite=gray, right=of troisBas](quatre){\(M\)};
-		\draw[->] (troisBas) -- (quatre);
-	\end{tikzpicture}
+  \begin{tikzpicture}[node distance=1cm,
+    boite/.style={draw,rectangle, minimum width=1cm, fill=#1!25}]
+    \node[boite=red](premier){\(S\)};
+    \node[boite=green, above right=of premier](secondHaut){\(A\)};
+    \draw[->] (premier) -- node[midway](milieuHaut){} (secondHaut.west);
+    \node[above=.5cm of milieuHaut](labelMilieuHaut){\(\alpha\)};
+    \draw[->] (labelMilieuHaut) -- (milieuHaut.center);
+    \node[boite=orange, below right=of premier](secondBas){\(B\)};
+    \draw[->] (premier) -- node[midway](milieuBas){} (secondBas.west);
+    \node[below=.5cm of milieuBas](labelMilieuBas){\(\beta\)};
+    \draw[->] (labelMilieuBas) -- (milieuBas.center);
+    \node[boite=blue, right=of secondHaut](troisHaut){\(R\)};
+    \draw[->] (secondHaut) -- (troisHaut);
+    \draw[->] (secondBas) -- (troisHaut);
+    \node[boite=yellow, right=of secondBas](troisBas){\(G\)};
+    \draw[->] (secondBas) -- (troisBas);
+    \draw[->] (troisBas) -- (troisHaut);
+    \node[boite=gray, right=of troisBas](quatre){\(M\)};
+    \draw[->] (troisBas) -- (quatre);
+  \end{tikzpicture}
 } \hfill \
 
 
@@ -381,9 +488,4 @@ Avce quelque chose de très simple on ``fitte'' les données
   \includegraphics[width=0.8\linewidth]{../slides/figure1.jpg}
 \end{center}
 
-\section*{References}
-
-\bibliography{kiss_covid}
-\nocite{*}
-
-\end{document}
+\fi
