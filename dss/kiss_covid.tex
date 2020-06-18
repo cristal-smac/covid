@@ -78,11 +78,11 @@
   confinement). \\
   L'évolution d'une maladie infectieuse peut-être modélisée de
   différentes façons (approche centrée-individus, réseaux sociaux,
-  equations mathématiques, modèles de flux).\\
-  Toutes ces modélisations necessite l'usage de paramètres pour
+  équations mathématiques, modèles de flux).\\
+  Toutes ces modélisations nécessite l'usage de paramètres pour
   calibrer le modèle.\\
   Plus il y a de paramètres, plus il est facile de coller aux
-  données (tout comme il existe toujours un polynome de degrès $n$ qui passe par $n$ points).\\
+  données (tout comme il existe toujours un polynôme de degré $n$ qui passe par $n$ points).\\
   Certains modélisateurs pensent que plus les paramètres sont précis
   (et nombreux), plus le modèle sera fiable. C'est un course
   sans fin.\\
@@ -103,7 +103,7 @@ Infectious disease \sep SIR modelling \sep Decision support system \sep artifici
 
 \linenumbers
 
-\section{Introduction (ce qui se fait en épidémio)}
+\section{Introduction (ce qui se fait en épidémiologie)}
 
 Depuis exactement un siècle et le papier séminal de Kermack et
 McKendrick, la modélisation épidémiologique a pris une part
@@ -124,7 +124,7 @@ apprentissage génétique.
 
 
 
-Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour expliquer la hausse et la baisse rapides du nombre de patients infectés observées lors d'epidémies telles que la peste (à Londres en 1665, à Bombay en 1906) ou le choléra (à Londres en 1865). Il a été remis à l’avant-plan à la fin des années 1970 par Anderson et May \cite{}.
+Le modèle SIR de Kermack et McKendrick \cite{} a été proposé en 1927 pour expliquer la hausse et la baisse rapides du nombre de patients infectés observées lors d’épidémies telles que la peste (à Londres en 1665, à Bombay en 1906) ou le choléra (à Londres en 1865). Il a été remis à l’avant-plan à la fin des années 1970 par Anderson et May \cite{}.
 
 
 \bigskip
@@ -199,7 +199,7 @@ Poisson process : ref ferguson.
 
 \section{L'apport de l'informatique}
 
-L'usage de l'IA est une méthode nouvelle pour l'épidémio, mais ancienne pour l'informatique.
+L'usage de l'IA est une méthode nouvelle pour l'épidémiologie, mais ancienne pour l'informatique.
 
 
 Certains pensent que si on complexifie le modèle, on s'approche de la réalité : or plus il y a de paramètres, plus c'est facile de ``fitter'' : Problématique de l'overfitting (mettre une belle courbe qui passe par n points alors qu'en fait c'est une droite qui généralise le mieux).
@@ -228,9 +228,9 @@ L'apport de l'informatique :
 
 \subsection{Nécessité}
 
-Les modèles d'épidémie vont du simple modèle SIR que l'on peut résoudre sur un coin de feuille à des modèles réunissant des centaines d"agents indépendants, placés sur des cartes reproduisant des pays entiers (REF nécessaire). Les progrès informatiques rendent possible toutes les constructions auquelles les épidémiologistes peuvent penser. Quel doit être le principe qui guide les choix des modélisateurs ? 
+Les modèles d'épidémie vont du simple modèle SIR que l'on peut résoudre sur un coin de feuille à des modèles réunissant des centaines d"agents indépendants, placés sur des cartes reproduisant des pays entiers (REF nécessaire). Les progrès informatiques rendent possible toutes les constructions auxquelles les épidémiologistes peuvent penser. Quel doit être le principe qui guide les choix des modélisateurs ? 
 
-Un principe central dans la littérature informatique est celui de \textit{nécessité}. Chaque élément d'un modèle doit être nécessaire, et cette necessité doit etre justifiée.
+Un principe central dans la littérature informatique est celui de \textit{nécessité}. Chaque élément d'un modèle doit être nécessaire, et cette nécessité doit être justifiée.
 
 A détailler : interaction avec validation. 
 1) Rapport complexité / fitting
@@ -244,19 +244,19 @@ Il s'agit d'un aspect central dans modélisation informatique et l'apprentissage
 
 \subsection{Approximation}
 
-Les possibilités induites par la modélisation donnent souvent l'illusion de la précision. On lit par exemple dans la presse des estimations très précises après la virgule produites par des modèles épiémiologiques portant sur des éléments très difficiles à estimer : c'est le cas par exemple des estimations du nombre d'infectés ou dut aux de propagation, souvent rapportées avec trois chiffres après la virgule (REF 4,4\% presse). 
+Les possibilités induites par la modélisation donnent souvent l'illusion de la précision. On lit par exemple dans la presse des estimations très précises après la virgule produites par des modèles épidémiologiques portant sur des éléments très difficiles à estimer : c'est le cas par exemple des estimations du nombre d'infectés ou dut aux de propagation, souvent rapportées avec trois chiffres après la virgule (REF 4,4\% presse). 
 
-Ces analyses ignorent une question déterminante : le phénomène est-il capturable entièrement par des moyens computationnels ? Parfois le mécanisme à l'oeuvre est une dynamique changeante dont la prévision est hors de notre portée : c'est le cas des mutations possibles du COVID-19 au cours de l'épidémie, ou de sa réaction face à l'environnement. C'est particulièrement vrai lorsque l'on s'attaque à des dynamiques sociales, déterminantes dans le calcul du taux de propagation. La difficulté de modéliser les comportements humains et leur aggrégation au niveau de la société est un challenge considérable, qui nourrit une littérature particulièrement active parmi les discplines informatiques. Il est possibile de tirer de nombreux enseignements de cette littérature à destination de l'épidémiologie : le principal est sans doute le recul nécessaire relatif à la précision des estimations et des prévisions des modèles impliquant des décisions humaines (REF article JASSS).
+Ces analyses ignorent une question déterminante : le phénomène est-il capturable entièrement par des moyens computationnels ? Parfois le mécanisme à l'oeuvre est une dynamique changeante dont la prévision est hors de notre portée : c'est le cas des mutations possibles du COVID-19 au cours de l'épidémie, ou de sa réaction face à l'environnement. C'est particulièrement vrai lorsque l'on s'attaque à des dynamiques sociales, déterminantes dans le calcul du taux de propagation. La difficulté de modéliser les comportements humains et leur agrégation au niveau de la société est un challenge considérable, qui nourrit une littérature particulièrement active parmi les discipline informatiques. Il est possible de tirer de nombreux enseignements de cette littérature à destination de l'épidémiologie : le principal est sans doute le recul nécessaire relatif à la précision des estimations et des prévisions des modèles impliquant des décisions humaines (REF article JASSS).
 
-Un autre aspect relativement méconnu du grand public relatif aux modèles épidémiologiques est la sensibilité aux paramètres initiaux. Un changement relativement faible des conditions initiales peut conduire à des modélisations très différentes. Il s'agit d'un aspect bien connu des disciplines informatiques, étudié notament par les sciences de la complexité. 
+Un autre aspect relativement méconnu du grand public relatif aux modèles épidémiologiques est la sensibilité aux paramètres initiaux. Un changement relativement faible des conditions initiales peut conduire à des modélisations très différentes. Il s'agit d'un aspect bien connu des disciplines informatiques, étudié notamment par les sciences de la complexité. 
 
 ***
 
-Le problème vient du fait que l'approximation n'est pas une fonction "native" des nouveaux outils proposés à l'épidémiologie. La simulation informatique d'un modèle tel que les modèles par agents ou les modèles compartimentaux nécessitent des input fixes et donnent des résultats tout aussi fixes : une prédiction telle que "2452 décès" constituera alors un résultat. C'est donc une étape supplémentaire que d'insufler l'approximation à ces modèles là. SOit en transmettant la véritable approximation des entrées, en réalisant plusieurs scénarios avec des valeurs différentes. Soit mathématiquement, en transformant une entrée en distribution de probabilité ce qui permet d'obtenir un résultat aléatoire, que l'on pourra alors caractériser à l'aide d'intervalles de confiance. Soit, si l'approximation provient de mécanismes stochastiques à l'intérieur du modèle, en procédant à un grand nombre de simulations qui permettront d'estimer le caractère aléatoire du résultat, par exemple via une moyenne et un écart-type du nombre de décés prédits. Dans de nombreux cas, la modélisation réclamera une combinaison de ces éléments là.
+Le problème vient du fait que l'approximation n'est pas une fonction "native" des nouveaux outils proposés à l'épidémiologie. La simulation informatique d'un modèle tel que les modèles par agents ou les modèles compartimentaux nécessitent des input fixes et donnent des résultats tout aussi fixes : une prédiction telle que "2452 décès" constituera alors un résultat. C'est donc une étape supplémentaire que d’insuffler l'approximation à ces modèles là. Soit en transmettant la véritable approximation des entrées, en réalisant plusieurs scénarios avec des valeurs différentes. Soit mathématiquement, en transformant une entrée en distribution de probabilité ce qui permet d'obtenir un résultat aléatoire, que l'on pourra alors caractériser à l'aide d'intervalles de confiance. Soit, si l'approximation provient de mécanismes stochastiques à l'intérieur du modèle, en procédant à un grand nombre de simulations qui permettront d'estimer le caractère aléatoire du résultat, par exemple via une moyenne et un écart-type du nombre de décès prédits. Dans de nombreux cas, la modélisation réclamera une combinaison de ces éléments là.
 
 \subsection{Validation}
 
-L'épidémie de COVID-19 peut être modélisée de manière très différente, même si l'on s'accordait sur les caractéristiques de base du virus. La question déterminante est donc de savoir si une modélisation est difèle à la réalité qu'elle prétend simuler, voire prévoir. Il s'agit d'une problématique cezntrale en modélisation informatique, celle de la \textit{validation}.
+L'épidémie de COVID-19 peut être modélisée de manière très différente, même si l'on s'accordait sur les caractéristiques de base du virus. La question déterminante est donc de savoir si une modélisation est fidèle à la réalité qu'elle prétend simuler, voire prévoir. Il s'agit d'une problématique centrale en modélisation informatique, celle de la \textit{validation}.
 
 La littérature informatique peut nous aider à nous prémunir contre un certain nombre d'écueils, comme celui de l'\textit{overfitting}. (...)
 
@@ -355,13 +355,13 @@ Mentionner \cite{benvenuto_application_2020} : "The correlogram reporting the AC
 
 Il s'agit d'un modèle SIRGM : une extension du modèle SIR aux deux catégories qui intéressent particulièrement les décideurs en ce qui concerne le COVID-19, à savoir le nombre de personnes en réanimation (R) et le nombre de décès (M). Incidemment, il s'agit des catégories pour lesquelles les données sont les plus fiables. Par opposition, le nombre d'infectés et le nombre d'hospitalisés souffrent d'un biais de sélection important et variable au cours du temps, dus à des changements de politiques publiques.
 
-L'objet du modèle est de trouver les paramètres de ce modèle épidémiologique de sorte qu'il reproduise le plus fidèlement possible les données réelles. D'un point de vue informatique, il s'agit de fitter le plus précisèment possible les courbes du nombre de lits occupés en réanimation et du nombre de décès. 
+L'objet du modèle est de trouver les paramètres de ce modèle épidémiologique de sorte qu'il reproduise le plus fidèlement possible les données réelles. D'un point de vue informatique, il s'agit de fitter le plus précisément possible les courbes du nombre de lits occupés en réanimation et du nombre de décès. 
 
 Certains paramètres du modèle épidémiologique ont fait l'objet d'études médicales : c'est le cas du temps de contagiosité et du taux de cas grave. Ils sont donc fixés à priori, et nous verrons à la section suivante les conséquences de les laisser libres.
 
-un autre paramètre fixé à priori est celui du nombre d'infecté initial. D'après les données, 3 personnes ont été officiellement depistées au début de la période, néanmoins le nombre d'infecté réel est probablement beaucoup plus éevé. Il n'y a pas de moyen de connaître précisèment ce chiffre : nous l'avons fixé arbitrairement à 200. Ce paramètre interagit principalement avec le taux de propagation de la période initiale. Si le nombre d'infecté initial est moindre, le fitting de la courbe ajustera simplement le taux de propagtion initial à la hausse et conservera les autres paramètres à un niveau très similaire. Il s'agit d'un avertissement supplémentaire relatif à une interprétation trop précise des taux de propagation : ils dépendent crucialement d'informations dont nous ne disposons pas.
+un autre paramètre fixé à priori est celui du nombre d'infecté initial. D'après les données, 3 personnes ont été officiellement dépistées au début de la période, néanmoins le nombre d'infecté réel est probablement beaucoup plus élevé. Il n'y a pas de moyen de connaître précisément ce chiffre : nous l'avons fixé arbitrairement à 200. Ce paramètre interagit principalement avec le taux de propagation de la période initiale. Si le nombre d'infecté initial est moindre, le fitting de la courbe ajustera simplement le taux de propagation initial à la hausse et conservera les autres paramètres à un niveau très similaire. Il s'agit d'un avertissement supplémentaire relatif à une interprétation trop précise des taux de propagation : ils dépendent crucialement d'informations dont nous ne disposons pas.
 
-La propagation du virus est le premier paramètre de ce type de modèle (c'est le bêta en Figure \ref{figure:SIRGM}, qui peut également être exprimé en termes de R0). Cependant, ce taux de propagation dépend du comportement humain, et donc des changements de politiques publiques en termes de confinement, de règles de distanciation sociale, etc. AU lieu de fixer un seul taux de propagation, nous en fixons donc quatre, soit un pour chaque grande période en France : la période initiale, une période d'une dizaine de jours précédant l'entrée en vigueur réglementaire du confinement strict, le confinement lui même, puis le déconfinement. La période précédant le confionement a ét mrquée par des déplacements très importants de la population qui pouvait choisir son lieu de confinement, ce qui explique la nécéssité de la prendre en compte.
+La propagation du virus est le premier paramètre de ce type de modèle (c'est le bêta en Figure \ref{figure:SIRGM}, qui peut également être exprimé en termes de R0). Cependant, ce taux de propagation dépend du comportement humain, et donc des changements de politiques publiques en termes de confinement, de règles de distanciation sociale, etc. AU lieu de fixer un seul taux de propagation, nous en fixons donc quatre, soit un pour chaque grande période en France : la période initiale, une période d'une dizaine de jours précédant l'entrée en vigueur réglementaire du confinement strict, le confinement lui même, puis le dé-confinement. La période précédant le confinement a été marquée par des déplacements très importants de la population qui pouvait choisir son lieu de confinement, ce qui explique la nécessité de la prendre en compte.
 
 Les autres paramètres sont les variables d'ajustement laissées libres pour obtenir un modèle épidémiologique cohérent avec les données observées.
 
@@ -388,11 +388,11 @@ Le problème devient dès lors un problème d'optimisation, et plusieurs techniq
 \label{figure:meilleur}
 \end{figure}
 
-Le modèle fitte raisonnablement bien les données, et ce avec une structure très simple. Les parmètres estimés sont cohérent avec la littérature scientifique portant sur le COVID-19. 
+Le modèle fitte raisonnablement bien les données, et ce avec une structure très simple. Les paramètres estimés sont cohérent avec la littérature scientifique portant sur le COVID-19. 
 
 \subsection{Progression des médecins}
 
-Ce type de modèle peut néanmoins ignorer certains phénomènes qui viendraient changer les paramètres au cours du temps. C'est par exemple le cas des taux de mortalité, qui peuvent être affectés par la progression du corps médical sur le sujet. Des entretiens avec des reponsables du CHU de Lille nous ont informé de l'amélioration du traitement des personnes en réanimation. Ce type de phénomène est compatible avec une modélisation légèrement différente de l'épidémie, comme en témoigne la Figure \ref{figure:medecins}.
+Ce type de modèle peut néanmoins ignorer certains phénomènes qui viendraient changer les paramètres au cours du temps. C'est par exemple le cas des taux de mortalité, qui peuvent être affectés par la progression du corps médical sur le sujet. Des entretiens avec des responsables du CHU de Lille nous ont informé de l'amélioration du traitement des personnes en réanimation. Ce type de phénomène est compatible avec une modélisation légèrement différente de l'épidémie, comme en témoigne la Figure \ref{figure:medecins}.
 
 \begin{table}
 \small
@@ -415,11 +415,11 @@ Ce type de modèle peut néanmoins ignorer certains phénomènes qui viendraient
 \label{figure:medecins}
 \end{figure}
 
-On observe que le modèle permet un meilleur fitting des entrées en réanimation si la courbe des décés est autorisée à décrocher progressivement de celle prévue par le modèle. Cela témoigne du fait qu'intégrer la progression des médecins améliorerait le fitting des données. Il y a donc un arbitrage a réaliser en termes de perte de simplicité versus l'amélioration de la prédictabilité du modèle.
+On observe que le modèle permet un meilleur fitting des entrées en réanimation si la courbe des décès est autorisée à décrocher progressivement de celle prévue par le modèle. Cela témoigne du fait qu'intégrer la progression des médecins améliorerait le fitting des données. Il y a donc un arbitrage a réaliser en termes de perte de simplicité versus l'amélioration de la prédictabilité du modèle.
 
 \subsection{Des paramètres laissés libres}
 
-Le danger de laisser trop de paramètres libres pour l'optimisation est d'obtenir une modélisation plus performante mais qui correspond à un tout autre virus. Prenons l'exemple du temps de contagiosité : on sait désormais que c'est une des charactéristiques singulières du COVID-19, qui présente des temps d'incubation et de contagiosité très importants comparés aux autres virus.
+Le danger de laisser trop de paramètres libres pour l'optimisation est d'obtenir une modélisation plus performante mais qui correspond à un tout autre virus. Prenons l'exemple du temps de contagiosité : on sait désormais que c'est une des caractéristiques singulières du COVID-19, qui présente des temps d'incubation et de contagiosité très importants comparés aux autres virus.
 
 Si l'on laisse le temps de contagiosité libre dans la modélisation (via le taux S vers I), on peut obtenir une modélisation telle que décrite dans la Table \ref{table:faux} et la Figure \ref{figure:faux}.
 
